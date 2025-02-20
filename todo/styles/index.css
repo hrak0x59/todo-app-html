@@ -11,5 +11,32 @@ ul {
 }
 
 #taskInput {
-  min-width: 200px;
+  min-width: 20%;
 }
+
+/* link */
+a:link {
+  color: pink;
+}
+
+a:visited {
+  color: green;
+}
+
+
+/* PCの全画面の場合 */
+@media (min-width: 100em) {
+  body {
+    background-color: yellow;
+  }
+
+  #taskInput {
+    transform: rotate(0.5turn);
+  }
+
+  a:hover {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red);
+    text-decoration: none;
+  }
+}
+
