@@ -1,33 +1,158 @@
+/* 基本的なスタイル（全ての画面サイズに適用） */
 body {
-  font-family: "Roboto", sans-serif;
-  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ヘッダーのスタイリング */
+header {
+  background-color: #2C3E50;
+  color: white;
+  padding: 20px 0;
   text-align: center;
-  margin-top: 3rem;
 }
 
+header h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* ナビゲーションのスタイリング */
+nav {
+  background-color: #34495E;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #1ABC9C;
+}
+
+/* メインコンテンツ */
+main {
+  height: 870px;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+/* インプットボックスとボタン要素 */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #4e9fff;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #4e9fff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3586e5;
+}
+
+/* TODOリスト部分 */
 ul {
-  text-align: left;
-  margin-left: 40%;
+  list-style-type: none;
+  padding: 0;
 }
 
-#taskInput {
-  min-width: 20%;
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
-/* link */
-a:link {
-  color: pink;
+li button {
+  background-color: transparent;
+  color: #e74c3c;
+  border: none;
+  cursor: pointer;
 }
 
-a:visited {
-  color: green;
+li button:hover {
+  color: #c0392b;
+}
+
+/* フッターのスタイリング */
+footer {
+  background-color: #2C3E50;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #1ABC9C;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* モバイルサイズ */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .todo-item {
+    font-size: 16px;
+  }
 }
 
 
 /* PCの全画面の場合 */
 @media (min-width: 100em) {
-  body {
-    background-color: yellow;
+  main {
+    background-color: red;
   }
 
   #taskInput {
@@ -39,4 +164,3 @@ a:visited {
     text-decoration: none;
   }
 }
-
